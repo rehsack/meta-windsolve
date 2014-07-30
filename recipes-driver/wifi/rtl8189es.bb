@@ -8,12 +8,12 @@ inherit module
 PR = "r0"
 PV = "0.1"
 
-SRC_URI = "http://www.windsolve.com/curie/rtl8189es.tar.gz \
+SRC_URI = "git://50.116.15.14/mx6/rtl8189es.git;protocol=ssh;user=git \
           "
-SRC_URI[md5sum] = "f16c10fb39e2d8b14bdf0159e3cf0a16"
-SRC_URI[sha256sum] = "3ac91457931b63a5a46fbc98593105aa549f1ccaa7a8e36006c05fa3c6f0b8b9"
 
-S = "${WORKDIR}/rtl8189es"
+SRCREV="39c21d9ebbf858ebaa12f47f06aa4ec642fda57d"
+
+S = "${WORKDIR}/git"
 
 # The inherit of module.bbclass will automatically name module packages with
 # "kernel-module-" prefix as required by the oe-core build environment.
