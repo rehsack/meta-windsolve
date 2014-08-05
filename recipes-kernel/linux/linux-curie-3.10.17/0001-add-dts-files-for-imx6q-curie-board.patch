@@ -1,7 +1,7 @@
 From 01ff880fa50f9ea65140871b34476422af9da9f9 Mon Sep 17 00:00:00 2001
 From: Cui Gao <gao.cui@windsolve.com>
 Date: Fri, 1 Aug 2014 14:23:21 +0800
-Subject: [PATCH 01/13] add dts files for imx6q curie board
+Subject: [PATCH 01/15] add dts files for imx6q curie board
 
 ---
  arch/arm/boot/dts/imx6q-curie.dts    |   21 +++++++++++++++++++++

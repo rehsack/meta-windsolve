@@ -1,7 +1,7 @@
 From 8b5b482bfaec6397c7e55a9ca9b62d4c8925f812 Mon Sep 17 00:00:00 2001
 From: Cui Gao <gao.cui@windsolve.com>
 Date: Fri, 1 Aug 2014 17:43:24 +0800
-Subject: [PATCH 10/13] add user button for curie board
+Subject: [PATCH 10/15] add user button for curie board
 
 ---
  arch/arm/boot/dts/imx6qdl-curie.dtsi |   10 ++++++++++

@@ -1,7 +1,7 @@
 From 0fc8844af597b1eb49c3adc2ccdacb489ba2f96d Mon Sep 17 00:00:00 2001
 From: Cui Gao <gao.cui@windsolve.com>
 Date: Sun, 3 Aug 2014 00:58:01 +0800
-Subject: [PATCH 12/13] add support of spdif for curie board
+Subject: [PATCH 12/15] add support of spdif for curie board
 
 ---
  arch/arm/boot/dts/imx6qdl-curie.dtsi |   13 +++++++++++++

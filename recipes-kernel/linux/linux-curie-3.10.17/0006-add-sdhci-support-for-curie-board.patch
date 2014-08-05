@@ -1,7 +1,7 @@
 From 7b06df23b4a1208b76ad2faf56dd5825d63f5fad Mon Sep 17 00:00:00 2001
 From: Cui Gao <gao.cui@windsolve.com>
 Date: Fri, 1 Aug 2014 16:19:37 +0800
-Subject: [PATCH 06/13] add sdhci support for curie board. SDHC2: Wi-Fi module
+Subject: [PATCH 06/15] add sdhci support for curie board. SDHC2: Wi-Fi module
  SDHC3: SD Card Slot SDHC4: eMMC
 
 ---

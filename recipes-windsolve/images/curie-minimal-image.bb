@@ -33,6 +33,7 @@ IMAGE_INSTALL += " \
 	ethtool \
 	xz \
 	lsof \
+	vivante-gpu-sdk \
 "
 
 export IMAGE_BASENAME = "curie-minimal-image"
