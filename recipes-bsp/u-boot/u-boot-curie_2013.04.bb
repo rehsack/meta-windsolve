@@ -14,6 +14,8 @@ SRCBRANCH = "imx_v2013.04_3.10.17_1.0.0_ga"
 SRC_URI = "git://git.freescale.com/imx/uboot-imx.git;protocol=git;branch=${SRCBRANCH} \
 		   file://0001-add-new-board-for-mx6qcurie.patch \
 		   file://0002-Porting-BSP-to-curie-board.patch \
+		   file://0003-add-imx6-duallite-curie-board.patch \
+		   file://0004-fix-the-dtb-name-for-mx6dl-curie-board.patch \
 		   "
 SRCREV = "ce0ea2507c492d43bbf88f8609482a171b2d2003"
 

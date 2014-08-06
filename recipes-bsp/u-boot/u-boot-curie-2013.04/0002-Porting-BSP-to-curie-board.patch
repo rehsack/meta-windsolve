@@ -1,7 +1,7 @@
 From 60ee9c3561f06fe387f6da85338abff55504f0f3 Mon Sep 17 00:00:00 2001
 From: Cui Gao <gao.cui@windsolve.com>
 Date: Fri, 1 Aug 2014 12:43:23 +0800
-Subject: [PATCH 2/2] Porting BSP to curie board
+Subject: [PATCH 2/4] Porting BSP to curie board
 
 ---
  board/freescale/mx6qcurie/mx6qcurie.c |  196 ++++-----------------------------

@@ -26,6 +26,8 @@ SRC_URI += "file://0001-add-dts-files-for-imx6q-curie-board.patch \
 			file://0011-add-support-of-hdmi-gpu-and-vpu-for-curie-board.patch \
 			file://0012-add-support-of-spdif-for-curie-board.patch \
 			file://0013-add-reset-control-for-ethernet-phy-of-curie-board.patch \
+			file://0014-add-support-for-imx6-duallite-curie-board.patch \
+			file://0015-change-default-fb-bpp-to-32-otherwise-the-gpu-test-o.patch \
 "
 COMPATIBLE_MACHINE = "(curie)"
 

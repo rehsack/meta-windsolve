@@ -1,16 +1,5 @@
-#@TYPE: Machine
-#@NAME: curie
-#@SOC: i.MX6SL
-#@DESCRIPTION: Machine configuration for curie systems
-
-include conf/machine/include/imx-base.inc
-include conf/machine/include/tune-cortexa9.inc
-
-SOC_FAMILY = "mx6:mx6q:curie"
-
-# Ship all kernel modules by default
-MACHINE_EXTRA_RRECOMMENDS = " kernel-modules"
-MACHINE_FIRMWARE =+ " firmware-imx-vpu-imx6q "
+require conf/machine/include/imx-base.inc
+require conf/machine/include/tune-cortexa9.inc
 
 # Uncomment the following line to enable the hard floating point abi. Note that
 # this breaks some binary libraries and 3D (neither of which ship with
@@ -25,15 +14,13 @@ IMAGE_FSTYPES = "tar"
 SERIAL_CONSOLE = "115200 ttymxc0"
 
 PREFERRED_PROVIDER_u-boot = "u-boot-curie"
-PREFERRED_PROVIDER_virtual/kernel := "linux-curie"
+PREFERRED_PROVIDER_virtual/kernel = "linux-curie"
 
 PREFERRED_VERSION_firmware-imx = "3.10.17-1.0.0"
 PREFERRED_VERSION_imx-lib = "3.10.17-1.0.0"
 PREFERRED_VERSION_imx-vpu = "3.10.17-1.0.0"
 PREFERRED_VERSION_gpu-viv-bin-mx6q = "3.10.17-1.0.0-hfp"
-
-KERNEL_DEVICETREE = "imx6q-curie.dtb"
-
-UBOOT_MACHINE = "mx6qcurie"
+PREFERRED_VERSION_gpu-viv-bin-mx6dl = "3.10.17-1.0.0-hfp"
 
 MACHINE_FEATURES += " wifi"
+
