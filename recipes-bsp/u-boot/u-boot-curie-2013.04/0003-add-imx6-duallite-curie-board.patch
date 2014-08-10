@@ -1,7 +1,7 @@
 From 0b205ee54c8fb9950d922f5b1edd1f8f4c6a58ae Mon Sep 17 00:00:00 2001
 From: Cui Gao <gao.cui@windsolve.com>
 Date: Tue, 5 Aug 2014 13:09:03 +0800
-Subject: [PATCH 3/4] add imx6 duallite curie board
+Subject: [PATCH 3/5] add imx6 duallite curie board
 
 ---
  boards.cfg |    1 +

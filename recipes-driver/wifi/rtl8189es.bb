@@ -11,7 +11,7 @@ PV = "0.1"
 SRC_URI = "git://50.116.15.14/mx6/rtl8189es.git;protocol=ssh;user=git \
           "
 
-SRCREV="39c21d9ebbf858ebaa12f47f06aa4ec642fda57d"
+SRCREV="7bef41fca23b5bbeea81c3063ab3d7c8b97aa348"
 
 S = "${WORKDIR}/git"
 

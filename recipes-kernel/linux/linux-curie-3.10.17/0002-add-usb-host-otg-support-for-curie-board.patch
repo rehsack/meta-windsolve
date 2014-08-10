@@ -1,7 +1,7 @@
 From bb6b92368214d4d8bd2c3d789a64347c5ed9737a Mon Sep 17 00:00:00 2001
 From: Cui Gao <gao.cui@windsolve.com>
 Date: Fri, 1 Aug 2014 14:25:44 +0800
-Subject: [PATCH 02/15] add usb host&otg support for curie board
+Subject: [PATCH 02/16] add usb host&otg support for curie board
 
 ---
  arch/arm/boot/dts/imx6qdl-curie.dtsi |   12 ++++++++++++

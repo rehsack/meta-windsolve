@@ -1,7 +1,7 @@
 From 10d1d3d690e524f1001222146217c4336e905d0f Mon Sep 17 00:00:00 2001
 From: Cui Gao <gao.cui@windsolve.com>
 Date: Tue, 5 Aug 2014 13:28:49 +0800
-Subject: [PATCH 4/4] fix the dtb name for mx6dl-curie board
+Subject: [PATCH 4/5] fix the dtb name for mx6dl-curie board
 
 ---
  boards.cfg |    2 +-

@@ -1,7 +1,7 @@
 From a03438d28a8906c9ffc49c7d17d205978aaff49e Mon Sep 17 00:00:00 2001
 From: Cui Gao <gao.cui@windsolve.com>
 Date: Sun, 3 Aug 2014 00:30:19 +0800
-Subject: [PATCH 11/15] add support of hdmi gpu and vpu for curie board
+Subject: [PATCH 11/16] add support of hdmi gpu and vpu for curie board
 
 ---
  arch/arm/boot/dts/imx6qdl-curie.dtsi |   48 ++++++++++++++++++++++++++++++++++

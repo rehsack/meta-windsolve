@@ -1,0 +1,33 @@
+From 3f60cd15009840a5722cfc45c617e7e4f1d2357a Mon Sep 17 00:00:00 2001
+From: Cui Gao <gao.cui@windsolve.com>
+Date: Thu, 7 Aug 2014 17:29:34 +0800
+Subject: [PATCH 5/5] fix devno bug in function mmc_get_env_devno. The devno
+ offset should be 2 for curie board since we disabled
+ SDHC1 and SDHC2.
+
+---
+ board/freescale/mx6qcurie/mx6qcurie.c |    5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/board/freescale/mx6qcurie/mx6qcurie.c b/board/freescale/mx6qcurie/mx6qcurie.c
+index 652c7a1..4bf6bc9 100644
+--- a/board/freescale/mx6qcurie/mx6qcurie.c
++++ b/board/freescale/mx6qcurie/mx6qcurie.c
+@@ -384,11 +384,12 @@ int mmc_get_env_devno(void)
+ 	/* BOOT_CFG2[3] and BOOT_CFG2[4] */
+ 	dev_no = (soc_sbmr & 0x00001800) >> 11;
+ 
+-	/* need ubstract 1 to map to the mmc device id
++	/* need ubstract 2 to map to the mmc device id
++	 * since we are missing two USDHC for our board
+ 	 * see the comments in board_mmc_init function
+ 	 */
+ 
+-	dev_no--;
++	dev_no -= 2;
+ 
+ 	return dev_no;
+ }
+-- 
+1.7.9.5
+
