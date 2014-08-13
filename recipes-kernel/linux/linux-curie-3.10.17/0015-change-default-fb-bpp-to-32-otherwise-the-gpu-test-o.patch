@@ -1,7 +1,7 @@
 From 2298086bdc734c62393d9d357f2cfb2a8c5b2559 Mon Sep 17 00:00:00 2001
 From: Cui Gao <gao.cui@windsolve.com>
 Date: Tue, 5 Aug 2014 17:40:55 +0800
-Subject: [PATCH 15/16] change default fb bpp to 32, otherwise, the gpu test
+Subject: [PATCH 15/17] change default fb bpp to 32, otherwise, the gpu test
  outputs an incorrect image
 
 ---

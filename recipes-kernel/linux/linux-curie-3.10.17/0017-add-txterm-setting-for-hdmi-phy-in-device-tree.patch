@@ -1,0 +1,77 @@
+From 778cebe52adc1c7f0c1a6e5d8c6f03ed86f14342 Mon Sep 17 00:00:00 2001
+From: Cui Gao <gao.cui@windsolve.com>
+Date: Wed, 13 Aug 2014 20:34:39 +0800
+Subject: [PATCH 17/17] add txterm setting for hdmi phy in device tree
+
+---
+ arch/arm/boot/dts/imx6qdl-curie.dtsi |    3 ++-
+ drivers/video/mxc/mxc_hdmi.c         |   13 +++++++++++--
+ 2 files changed, 13 insertions(+), 3 deletions(-)
+
+diff --git a/arch/arm/boot/dts/imx6qdl-curie.dtsi b/arch/arm/boot/dts/imx6qdl-curie.dtsi
+index 6ab36ce..a1641d1 100644
+--- a/arch/arm/boot/dts/imx6qdl-curie.dtsi
++++ b/arch/arm/boot/dts/imx6qdl-curie.dtsi
+@@ -300,7 +300,8 @@
+ };
+ 
+ &hdmi_video {
+-	fsl,phy_reg_vlev = <0x0294>;
++	fsl,phy_reg_txterm = <0x0>;
++	fsl,phy_reg_vlev = <0x0>;
+ 	fsl,phy_reg_cksymtx = <0x800d>;
+ 	status = "okay";
+ };
+diff --git a/drivers/video/mxc/mxc_hdmi.c b/drivers/video/mxc/mxc_hdmi.c
+index e510025..0511c6f 100644
+--- a/drivers/video/mxc/mxc_hdmi.c
++++ b/drivers/video/mxc/mxc_hdmi.c
+@@ -145,6 +145,7 @@ struct hdmi_phy_reg_config {
+ 	/* HDMI PHY register config for pass HCT */
+ 	u16 reg_vlev;
+ 	u16 reg_cksymtx;
++	u16 reg_txterm;
+ };
+ 
+ struct mxc_hdmi {
+@@ -1216,9 +1217,12 @@ static int hdmi_phy_configure(struct mxc_hdmi *hdmi, unsigned char pRep,
+ 	if (hdmi->phy_config.reg_cksymtx != 0)
+ 		hdmi_phy_i2c_write(hdmi, hdmi->phy_config.reg_cksymtx, 0x09);
+ 
+-	if (hdmi->phy_config.reg_vlev != 0)
++	if (hdmi->phy_config.reg_vlev >= 0 && hdmi->phy_config.reg_vlev <= 1023)
+ 		hdmi_phy_i2c_write(hdmi, hdmi->phy_config.reg_vlev, 0x0E);
+ 
++	if (hdmi->phy_config.reg_txterm >= 0 && hdmi->phy_config.reg_txterm <= 7)
++		hdmi_phy_i2c_write(hdmi, hdmi->phy_config.reg_txterm, 0x19);  /* TXTERM */
++
+ 	/* REMOVE CLK TERM */
+ 	hdmi_phy_i2c_write(hdmi, 0x8000, 0x05);  /* CKCALCTRL */
+ 
+@@ -2410,7 +2414,7 @@ static void hdmi_get_of_property(struct mxc_hdmi *hdmi)
+ 	const struct of_device_id *of_id =
+ 			of_match_device(imx_hdmi_dt_ids, &pdev->dev);
+ 	int ret;
+-	u32 phy_reg_vlev = 0, phy_reg_cksymtx = 0;
++	u32 phy_reg_vlev = 0, phy_reg_cksymtx = 0, phy_reg_txterm = 0;
+ 
+ 	if (of_id) {
+ 		pdev->id_entry = of_id->data;
+@@ -2430,9 +2434,14 @@ static void hdmi_get_of_property(struct mxc_hdmi *hdmi)
+ 	if (ret)
+ 		dev_dbg(&pdev->dev, "No board specific HDMI PHY cksymtx\n");
+ 
++	ret = of_property_read_u32(np, "fsl,phy_reg_txterm", &phy_reg_txterm);
++	if (ret)
++		dev_dbg(&pdev->dev, "No board specific HDMI PHY txterm\n");
++
+ 	/* Specific phy config */
+ 	hdmi->phy_config.reg_cksymtx = phy_reg_cksymtx;
+ 	hdmi->phy_config.reg_vlev = phy_reg_vlev;
++	hdmi->phy_config.reg_txterm = phy_reg_txterm;
+ 
+ }
+ 
+-- 
+1.7.9.5
+

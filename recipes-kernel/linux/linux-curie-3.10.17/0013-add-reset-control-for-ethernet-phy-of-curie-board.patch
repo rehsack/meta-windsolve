@@ -1,7 +1,7 @@
 From d77300664e84d51bd0b04042a7884c5e4daf063d Mon Sep 17 00:00:00 2001
 From: Cui Gao <gao.cui@windsolve.com>
 Date: Sun, 3 Aug 2014 02:41:02 +0800
-Subject: [PATCH 13/16] add reset control for ethernet phy of curie board
+Subject: [PATCH 13/17] add reset control for ethernet phy of curie board
 
 ---
  arch/arm/boot/dts/imx6qdl-curie.dtsi |    7 +++++++

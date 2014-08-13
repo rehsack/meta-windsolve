@@ -16,6 +16,7 @@ SRC_URI = "git://git.freescale.com/imx/uboot-imx.git;protocol=git;branch=${SRCBR
 		   file://0002-Porting-BSP-to-curie-board.patch \
 		   file://0003-add-imx6-duallite-curie-board.patch \
 		   file://0004-fix-the-dtb-name-for-mx6dl-curie-board.patch \
+		   file://0005-fix-devno-bug-in-function-mmc_get_env_devno.-The-dev.patch \
 		   "
 SRCREV = "ce0ea2507c492d43bbf88f8609482a171b2d2003"
 

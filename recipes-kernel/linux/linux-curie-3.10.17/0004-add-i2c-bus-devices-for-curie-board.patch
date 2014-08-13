@@ -1,7 +1,7 @@
 From 04647ca3a9bc806722bb8911e641aa85bb1b3962 Mon Sep 17 00:00:00 2001
 From: Cui Gao <gao.cui@windsolve.com>
 Date: Fri, 1 Aug 2014 15:14:53 +0800
-Subject: [PATCH 04/16] add i2c bus&devices for curie board I2C2: HDMI
+Subject: [PATCH 04/17] add i2c bus&devices for curie board I2C2: HDMI
  EDID@0x50 I2C3: PFUZE100@0x08
 
 ---

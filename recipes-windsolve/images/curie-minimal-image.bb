@@ -35,6 +35,8 @@ IMAGE_INSTALL += " \
 	lsof \
 	vivante-gpu-sdk \
 	rtl8189es \
+	openssh-sshd \
+	alsa-utils \
 "
 
 export IMAGE_BASENAME = "curie-minimal-image"

@@ -1,7 +1,7 @@
 From 6dd760967069c71a474d8b873c58cd04c0d80961 Mon Sep 17 00:00:00 2001
 From: Cui Gao <gao.cui@windsolve.com>
 Date: Thu, 7 Aug 2014 17:08:35 +0800
-Subject: [PATCH 16/16] Use MMC host index as the mmcblk index. It makes the
+Subject: [PATCH 16/17] Use MMC host index as the mmcblk index. It makes the
  index of mmcblk unchanged. It is hard to write
  bootargs if the eMMC index changes depending on
  whether there is an SD card inserted at boot time.

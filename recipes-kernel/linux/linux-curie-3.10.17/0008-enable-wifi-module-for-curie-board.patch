@@ -1,7 +1,7 @@
 From 8c65c04fa4687dba1e413dceea4a76002047eb4d Mon Sep 17 00:00:00 2001
 From: Cui Gao <gao.cui@windsolve.com>
 Date: Fri, 1 Aug 2014 17:02:55 +0800
-Subject: [PATCH 08/16] enable wifi module for curie board
+Subject: [PATCH 08/17] enable wifi module for curie board
 
 ---
  arch/arm/boot/dts/imx6qdl-curie.dtsi |    7 +++++++

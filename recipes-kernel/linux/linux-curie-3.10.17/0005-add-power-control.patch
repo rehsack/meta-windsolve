@@ -1,7 +1,7 @@
 From 32330825f76359efa066ff8b6cf963aff71d56e1 Mon Sep 17 00:00:00 2001
 From: Cui Gao <gao.cui@windsolve.com>
 Date: Fri, 1 Aug 2014 15:55:55 +0800
-Subject: [PATCH 05/16] add power control
+Subject: [PATCH 05/17] add power control
 
 ---
  arch/arm/boot/dts/imx6qdl-curie.dtsi |    9 ++++++++-
