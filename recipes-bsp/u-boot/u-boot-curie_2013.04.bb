@@ -10,15 +10,10 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=1707d6db1d42237583f50183a5651ecb"
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}-${PV}:"
 
-SRCBRANCH = "imx_v2013.04_3.10.17_1.0.0_ga"
-SRC_URI = "git://git.freescale.com/imx/uboot-imx.git;protocol=git;branch=${SRCBRANCH} \
-		   file://0001-add-new-board-for-mx6qcurie.patch \
-		   file://0002-Porting-BSP-to-curie-board.patch \
-		   file://0003-add-imx6-duallite-curie-board.patch \
-		   file://0004-fix-the-dtb-name-for-mx6dl-curie-board.patch \
-		   file://0005-fix-devno-bug-in-function-mmc_get_env_devno.-The-dev.patch \
+SRCBRANCH = "curie_v2013.04_3.10.17"
+SRC_URI = "git://50.116.15.14/mx6/uboot-curie.git;protocol=ssh;user=git;branch=${SRCBRANCH} \
 		   "
-SRCREV = "ce0ea2507c492d43bbf88f8609482a171b2d2003"
+SRCREV = "c207dc094e51f6073266b52b54523a13517cd4b2"
 
 S = "${WORKDIR}/git"
 

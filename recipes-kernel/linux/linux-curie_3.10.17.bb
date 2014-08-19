@@ -8,29 +8,15 @@ require recipes-kernel/linux/linux-dtb.inc
 
 DEPENDS += "lzop-native bc-native"
 
-SRCBRANCH = "imx_3.10.17_1.0.0_ga"
-SRCREV = "232293e0abb46639e188ab9d8643f1dbf94534f6"
+SRCBRANCH = "curie_3.10.17_1.0.0_ga"
+SRCREV = "9962966e045f8f5728950562536531cc092d407b"
 LOCALVERSION = "+curie"
 
-# patches for curie
-SRC_URI += "file://0001-add-dts-files-for-imx6q-curie-board.patch \
-			file://0002-add-usb-host-otg-support-for-curie-board.patch \
-			file://0003-add-ethernet-support-for-curie-board.patch \
-			file://0004-add-i2c-bus-devices-for-curie-board.patch \
-			file://0005-add-power-control.patch \
-			file://0006-add-sdhci-support-for-curie-board.patch \
-			file://0007-add-sata-support-for-curie-board-imx6q-only.patch \
-			file://0008-enable-wifi-module-for-curie-board.patch \
-			file://0009-add-led-supports-for-curie-board.patch \
-			file://0010-add-user-button-for-curie-board.patch \
-			file://0011-add-support-of-hdmi-gpu-and-vpu-for-curie-board.patch \
-			file://0012-add-support-of-spdif-for-curie-board.patch \
-			file://0013-add-reset-control-for-ethernet-phy-of-curie-board.patch \
-			file://0014-add-support-for-imx6-duallite-curie-board.patch \
-			file://0015-change-default-fb-bpp-to-32-otherwise-the-gpu-test-o.patch \
-			file://0016-Use-MMC-host-index-as-the-mmcblk-index.patch \
-			file://0017-add-txterm-setting-for-hdmi-phy-in-device-tree.patch \
+SRC_URI = "git://50.116.15.14/mx6/linux-curie.git;protocol=ssh;user=git;branch=${SRCBRANCH} \
+		   file://defconfig \
 "
+
+# patches for curie
 COMPATIBLE_MACHINE = "(curie)"
 
 
