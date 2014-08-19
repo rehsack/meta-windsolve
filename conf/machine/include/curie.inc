@@ -21,6 +21,7 @@ PREFERRED_VERSION_imx-lib = "3.10.17-1.0.0"
 PREFERRED_VERSION_imx-vpu = "3.10.17-1.0.0"
 PREFERRED_VERSION_gpu-viv-bin-mx6q = "3.10.17-1.0.0-hfp"
 PREFERRED_VERSION_gpu-viv-bin-mx6dl = "3.10.17-1.0.0-hfp"
+PREFERRED_VERSION_rtl8189es = "4.3.0.4"
 
 MACHINE_FEATURES += " wifi"
 
