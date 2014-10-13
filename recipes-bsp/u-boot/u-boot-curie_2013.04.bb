@@ -13,7 +13,7 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}-${PV}:"
 SRCBRANCH = "curie_v2013.04_3.10.17"
 SRC_URI = "git://50.116.15.14/mx6/uboot-curie.git;protocol=ssh;user=git;branch=${SRCBRANCH} \
 		   "
-SRCREV = "c207dc094e51f6073266b52b54523a13517cd4b2"
+SRCREV = "722ff2091a7c5276cef4fe27c0abf380fe583e14"
 
 S = "${WORKDIR}/git"
 
