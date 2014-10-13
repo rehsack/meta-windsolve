@@ -8,8 +8,8 @@ require recipes-kernel/linux/linux-dtb.inc
 
 DEPENDS += "lzop-native bc-native"
 
-SRCBRANCH = "curie_3.10.17_1.0.0_ga"
-SRCREV = "07e0002427a0a161b8f32e9359f0099b4979cbfa"
+SRCBRANCH = "curie_3.10.17_1.0.1_ga"
+SRCREV = "e365e0b61ddb9f7cccb43a4f7ced23b5e8d49947"
 LOCALVERSION = "+curie"
 
 SRC_URI = "git://50.116.15.14/mx6/linux-curie.git;protocol=ssh;user=git;branch=${SRCBRANCH} \
