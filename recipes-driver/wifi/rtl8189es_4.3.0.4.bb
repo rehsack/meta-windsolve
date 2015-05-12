@@ -8,7 +8,7 @@ inherit module
 SRC_URI = "git://50.116.15.14/mx6/rtl8189es-4.3.0.4.git;protocol=ssh;user=git \
           "
 
-SRCREV="1b33327d96e909a8fda8ca12d7f7695291985485"
+SRCREV="97277467d5822ac74e94cc542ece8b9eb37eef8b"
 
 S = "${WORKDIR}/git"
 
